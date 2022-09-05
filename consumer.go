@@ -7,9 +7,9 @@ import (
 
 	"go.uber.org/zap"
 
+	"github.com/fogcloud-io/tuya-pulsar-sdk-go/pkg/tylog"
 	"github.com/tuya/pulsar-client-go/core/manage"
 	"github.com/tuya/pulsar-client-go/core/msg"
-	"github.com/tuya/tuya-pulsar-sdk-go/pkg/tylog"
 )
 
 type ConsumerConfig struct {

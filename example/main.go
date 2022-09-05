@@ -5,9 +5,9 @@ import (
 	"encoding/base64"
 	"encoding/json"
 
-	pulsar "github.com/tuya/tuya-pulsar-sdk-go"
-	"github.com/tuya/tuya-pulsar-sdk-go/pkg/tylog"
-	"github.com/tuya/tuya-pulsar-sdk-go/pkg/tyutils"
+	pulsar "github.com/fogcloud-io/tuya-pulsar-sdk-go"
+	"github.com/fogcloud-io/tuya-pulsar-sdk-go/pkg/tylog"
+	"github.com/fogcloud-io/tuya-pulsar-sdk-go/pkg/tyutils"
 )
 
 func main() {
