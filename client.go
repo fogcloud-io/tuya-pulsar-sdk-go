@@ -3,6 +3,7 @@ package pulsar
 import (
 	"context"
 	"crypto/tls"
+	"errors"
 	"fmt"
 	"strings"
 	"time"
@@ -24,8 +25,11 @@ const (
 
 type Message = msg.Message
 
+var _ Client = &client{}
+
 type Client interface {
 	NewConsumer(config ConsumerConfig) (Consumer, error)
+	Stop()
 }
 
 type Consumer interface {
@@ -115,6 +119,7 @@ func (c *client) NewConsumer(config ConsumerConfig) (Consumer, error) {
 		return consumerList, nil
 	}
 
+	return nil, errors.New("pulsar connect failed")
 	// single topic
 	mc := manage.NewManagedConsumer(c.pool, cfg)
 	tylog.Info("create consumer success",
@@ -130,7 +135,9 @@ func (c *client) NewConsumer(config ConsumerConfig) (Consumer, error) {
 }
 
 func (c *client) GetPartition(topic string, config manage.ClientConfig) int {
-	p, err := c.pool.Partitions(context.Background(), config, topic)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
+	defer cancel()
+	p, err := c.pool.Partitions(ctx, config, topic)
 	if err != nil {
 		return 0
 	}
@@ -140,4 +147,8 @@ func (c *client) GetPartition(topic string, config manage.ClientConfig) int {
 func TopicForAccessID(accessID string) string {
 	topic := fmt.Sprintf("persistent://%s/out/event", accessID)
 	return topic
+}
+
+func (c *client) Stop() {
+	c.pool.Stop()
 }
