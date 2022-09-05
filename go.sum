@@ -3,8 +3,8 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/fogcloud-io/tuya-pulsar-client-go v0.0.1 h1:dmcT3uzoZP2f8cvL8ASR8YfIoOsLgbaW/9H52/FXWgE=
-github.com/fogcloud-io/tuya-pulsar-client-go v0.0.1/go.mod h1:VsKfdIfKEN3PcZ8ac7Sz6dYfsCyci3vs2uIXwVQJvmo=
+github.com/fogcloud-io/tuya-pulsar-client-go v0.0.3 h1:oYHfzvmXT10/N9MksZ7dXj7UeUoiygCZPm6gnDLnOFA=
+github.com/fogcloud-io/tuya-pulsar-client-go v0.0.3/go.mod h1:oO1uo7d2mCor7Y7c6Lj2gomogNTy0IQMakjk5bHnVzM=
 github.com/golang/protobuf v1.3.0/go.mod h1:Qd/q+1AKNOZr9uGQzbzCmRO6sUih6GTPZv6a1/R87v0=
 github.com/golang/protobuf v1.5.0/go.mod h1:FsONVRAS9T7sI+LIUmWTfcYkHO4aIWwzhcaSAoJOfIk=
 github.com/golang/protobuf v1.5.2 h1:ROPKBNFfQgOUMifHyP+KYbvpjbdoFNs+aK7DXlji0Tw=

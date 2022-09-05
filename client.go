@@ -10,8 +10,8 @@ import (
 
 	"github.com/fogcloud-io/tuya-pulsar-sdk-go/pkg/tylog"
 
-	"github.com/tuya/pulsar-client-go/core/manage"
-	"github.com/tuya/pulsar-client-go/core/msg"
+	"github.com/fogcloud-io/tuya-pulsar-client-go/core/manage"
+	"github.com/fogcloud-io/tuya-pulsar-client-go/core/msg"
 )
 
 const (
