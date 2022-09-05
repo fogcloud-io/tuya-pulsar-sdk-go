@@ -1,6 +1,6 @@
 module github.com/fogcloud-io/tuya-pulsar-sdk-go
 
-go 1.12
+go 1.17
 
 require (
 	github.com/golang/protobuf v1.5.2 // indirect
@@ -17,4 +17,14 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
-replace github.com/tuya/pulsar-client-go => github.com/fogcloud-io/tuya-pulsar-client-go v0.0.1
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/konsorten/go-windows-terminal-sequences v1.0.3 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	go.uber.org/atomic v1.7.0 // indirect
+	go.uber.org/multierr v1.6.0 // indirect
+	google.golang.org/protobuf v1.26.0 // indirect
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
+)
+
+replace github.com/tuya/pulsar-client-go v0.0.0-20201117084529-d7dfa0597559 => github.com/fogcloud-io/tuya-pulsar-client-go v0.0.1

@@ -28,7 +28,12 @@ func main() {
 		Topic: topic,
 		Auth:  pulsar.NewAuthProvider(accessID, accessKey),
 	}
-	csm, _ := c.NewConsumer(csmCfg)
+	csm, err := c.NewConsumer(csmCfg)
+	if err != nil {
+		tylog.Info("NewConsumer: ", tylog.ErrorField(err))
+		c.Stop()
+		return
+	}
 
 	// handle message
 	csm.ReceiveAndHandle(context.Background(), &helloHandler{AesSecret: accessKey[8:24]})
