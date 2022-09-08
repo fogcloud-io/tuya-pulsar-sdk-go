@@ -3,7 +3,7 @@ module github.com/fogcloud-io/tuya-pulsar-sdk-go
 go 1.17
 
 require (
-	github.com/fogcloud-io/tuya-pulsar-client-go v0.0.3
+	github.com/fogcloud-io/tuya-pulsar-client-go v0.0.5
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/kr/pretty v0.2.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect

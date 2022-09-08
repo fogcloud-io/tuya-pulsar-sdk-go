@@ -84,7 +84,10 @@ func (l *ConsumerList) Stop() {
 		safei := i
 		wg.Add(1)
 		go func() {
-			l.list[safei].Stop()
+			c := l.list[safei]
+			if c != nil {
+				c.Stop()
+			}
 			wg.Done()
 		}()
 	}
