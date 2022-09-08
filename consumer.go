@@ -133,5 +133,8 @@ func (c *consumerImpl) Handler(ctx context.Context, handler PayloadHandler, m *M
 func (c *consumerImpl) Stop() {
 	atomic.AddUint32(&c.stopFlag, 1)
 	c.cancelFunc()
+	if c.csm != nil {
+		c.csm.Close(context.Background())
+	}
 	<-c.stopped
 }
