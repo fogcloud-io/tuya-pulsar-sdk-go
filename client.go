@@ -119,7 +119,7 @@ func (c *client) NewConsumer(config ConsumerConfig) (Consumer, error) {
 		return consumerList, nil
 	}
 
-	close(errs)
+	// close(errs)
 	return nil, errors.New("pulsar connect failed")
 	// single topic
 	mc := manage.NewManagedConsumer(c.pool, cfg)
